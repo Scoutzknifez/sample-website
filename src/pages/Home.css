@@ -1,0 +1,99 @@
+.workable-home-space {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 32px;
+}
+.home-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+.blog-box {
+    border-radius: 12px;
+    margin-top: 20px;
+    background-color: rgb(200, 200, 200);
+    padding: 16px;
+    padding-top: 12px;
+}
+.blog-title {
+    font-size: 26px;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.blog-text {
+    margin-top: 8px;
+    font-size: 16px;
+    word-wrap: break-word;
+}
+.blog-bottom-container {
+    display: flex;
+    flex-direction: row;
+}
+.blog-time {
+    font-size: 14px;
+    text-align: end;
+    word-wrap: break-word;
+    align-self: flex-end;
+}
+.blog-small-button-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 16px;
+}
+.blog-delete-button {
+    background-color: red;
+    border-radius: 8px;
+    display: table;
+    cursor: pointer;
+}
+.blog-delete-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    padding: 8px;
+}
+.blog-edit-button {
+    background-color: green;
+    border-radius: 8px;
+    display: table;
+    margin-left: 12px;
+    cursor: pointer;
+}
+.blog-edit-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    padding: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.blog-edit-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    background-color: rgb(200,200,200);
+    border-radius: 12px;
+    padding: 12px;
+}
+.blog-editing-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+.blog-editing-body {
+    font-family: inherit;
+    font-size: 18px;
+    resize: none;
+    scroll-behavior: smooth;
+    height: 250px;
+    margin-top: 12px;
+}
