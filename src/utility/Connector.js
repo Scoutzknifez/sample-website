@@ -23,7 +23,8 @@ export function postBlog(blog) {
         function(resolve, reject) {
             blog = {
                 ...blog,
-                id: "create"
+                id: "create",
+                time: -1
             };
 
             let header = {
@@ -67,7 +68,6 @@ export function editPost(blog) {
     return new Promise(
         function(resolve, reject) {
             delete blog.isEditing;
-            delete blog.time;
 
             let header = {
                 method: "PUT",
