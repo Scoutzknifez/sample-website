@@ -48,13 +48,19 @@ class Home extends React.Component {
 
         editableBlogs[blog.id][isTitle ? "title" : "text"] = changedValue;
 
-        this.setState({editingBlogs: editableBlogs}, () => console.log(this.state.editingBlogs));
+        this.setState({editingBlogs: editableBlogs});
     }
 
-    finishEdit(id) {
+    finishEdit(blog) {
         let editableBlogs = {...this.state.editingBlogs};
 
-        API.editPost(editableBlogs[id])
+        if (editableBlogs[blog.id] == null) {
+            blog.isEditing = false;
+            this.forceUpdate();
+            return;
+        }
+
+        API.editPost(editableBlogs[blog.id])
         .then(() => {
             // Force home page refresh
             window.location.href = "/";
@@ -169,7 +175,7 @@ class Home extends React.Component {
                                         </p>
                                     </div>
                                     <div
-                                        onClick = {() => this.finishEdit(blog.id)}
+                                        onClick = {() => this.finishEdit(blog)}
                                         className = "blog-edit-button"
                                     >
                                         <p
